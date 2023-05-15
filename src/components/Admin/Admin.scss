@@ -12,7 +12,10 @@
       border: 1px solid green;
     }
     .admin-main {
-      border: 1px solid red;
+      .user-table-paginate {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
