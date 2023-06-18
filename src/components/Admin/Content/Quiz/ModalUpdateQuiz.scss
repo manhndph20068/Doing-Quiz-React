@@ -1,0 +1,23 @@
+.select-img {
+  border: 1px solid;
+  border: none;
+  background-color: rgb(226, 231, 236);
+  border-radius: 6px;
+  padding: 0px 10px;
+  margin-top: 7px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(242, 243, 245);
+  }
+}
+.img-preview {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  border: 1px dashed;
+  height: 150px;
+  .empty-img {
+    margin-top: 59px;
+  }
+}

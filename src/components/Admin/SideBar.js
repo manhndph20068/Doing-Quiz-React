@@ -12,9 +12,11 @@ import {
 import { FaTachometerAlt, FaGem } from "react-icons/fa";
 import sidebarBg from "../../assets/bg2.jpg";
 import { DiReact } from "react-icons/di";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SideBar = (props) => {
+  const navigate = useNavigate();
+
   const { collapsed, toggled, handleToggleSidebar } = props;
   return (
     <>
@@ -39,7 +41,7 @@ const SideBar = (props) => {
             }}
           >
             <DiReact size={"3em"} color={"blue"} />
-            <span>Manh</span>
+            <span onClick={() => navigate("/")}>Manhh</span>
           </div>
         </SidebarHeader>
 
@@ -54,8 +56,12 @@ const SideBar = (props) => {
               <MenuItem>
                 ManageUser <Link to="/admins/manage-users" />
               </MenuItem>
-              <MenuItem> 2</MenuItem>
-              <MenuItem> 3</MenuItem>
+              <MenuItem>
+                ManageQuiz <Link to="/admins/manage-quizzes" />
+              </MenuItem>
+              <MenuItem>
+                ManageQuestion <Link to="/admins/manage-questions" />
+              </MenuItem>
             </SubMenu>
           </Menu>
         </SidebarContent>
